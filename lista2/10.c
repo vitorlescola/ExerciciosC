@@ -10,6 +10,12 @@ int main(){
 	int alunos;
 	float media=0;
 	int i=1;
+	float notaMinima;
+	
+	do{
+		printf("Escreva a nota minima para ser aprovado: ");
+	    scanf("%f",&notaMinima);
+	}while(notaMinima<=0||notaMinima>10);
 	
 	do{
 	  printf("Escreva a quantidade de alunos na sala: ");
@@ -36,4 +42,10 @@ int main(){
 	  }
 	
 	printf("\nA media da sala é %f",media);
+	
+	if(media<notaMinima){
+		printf("\nA sala estaria em recuperação\n");
+	}else{
+		printf("\nA sala estaria aprovada\n");
+	}
 }
